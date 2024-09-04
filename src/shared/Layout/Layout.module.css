@@ -1,0 +1,11 @@
+.main {
+  background-color: #92a8d1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 80px;
+  justify-self: flex-start;
+  font-size: 18px;
+  line-height: 28px;
+}
