@@ -1,6 +1,5 @@
-# Getting Started with Create React App
-
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Test Project
+This project was made with Typescript, React, Redux(RTK Query), React-hook-form, React-router-dom and Antd.
 
 ## Available Scripts
 
