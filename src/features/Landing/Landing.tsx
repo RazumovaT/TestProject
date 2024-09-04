@@ -1,5 +1,5 @@
 import React, { ReactNode } from "react";
-import styles from "./Landing.module.css";
+import styles from "../Landing/Landing.module.css";
 
 type LandingProps = {
   children: ReactNode;
