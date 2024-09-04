@@ -99,9 +99,7 @@ export const CreatingPostForm: React.FC<Props> = ({
         console.log(e.message);
       }
     } finally {
-      {
-        setIsEdit && setIsEdit(false);
-      }
+      setIsEdit && setIsEdit(false);
       navigate("/posts", { replace: true });
       reset();
     }

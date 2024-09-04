@@ -10,9 +10,11 @@ type Props = {
   token: StoredToken | null;
 };
 export const PostsList: React.FC<Props> = ({ token }) => {
-  const [data, setData] = useState<NewPostBody[]>(MockData);
+  const [data, setData] = useState<NewPostBody[] | null>(null);
+  setData(MockData);
 
   const { data: posts, isLoading } = useGetAllPostsQuery(token);
+  console.log(posts);
 
   return (
     <>
@@ -20,11 +22,12 @@ export const PostsList: React.FC<Props> = ({ token }) => {
         <Spin fullscreen />
       ) : (
         <div className={styles.list}>
-          {data.map((post) => (
-            <div className={styles.posts} key={nanoid()}>
-              <PostItem post={post} token={token} />
-            </div>
-          ))}
+          {data &&
+            data.map((post) => (
+              <div className={styles.posts} key={nanoid()}>
+                <PostItem post={post} token={token} />
+              </div>
+            ))}
         </div>
       )}
     </>

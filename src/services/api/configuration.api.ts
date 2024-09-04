@@ -5,5 +5,5 @@ export const postApi = createApi({
   reducerPath: "postApi",
   baseQuery: baseQuery,
   tagTypes: ["Posts"],
-  endpoints: (builder) => ({}),
+  endpoints: () => ({}),
 });
